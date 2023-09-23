@@ -129,8 +129,9 @@ signupForm.addEventListener("submit", function (event) {
       alert("Password must be at least 8 characters long.");
       return;
     }
-    if (email === "admin123@gmail.com" && password === "00000000") {
-      window.location.href = "ticket_booking.html";
+  if (email === "admin123@gmail.com" && password === "00000000") {
+      signupForm.action="ticket_booking.html";
+      signupForm.submit(); 
     }
     signupForm.submit();
   }
