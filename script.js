@@ -129,13 +129,12 @@ signupForm.addEventListener("submit", function (event) {
       alert("Password must be at least 8 characters long.");
       return;
     }
-  if (email === "admin123@gmail.com" && password === "00000000") {
-      signupForm.action="ticket_booking.html";
-      signupForm.submit(); 
+    if (email === "admin123@gmail.com" && password === "00000000") {
+      // Redirect to "ticket_booking.html"
+      window.location.href = "ticket_booking.html";
+    } else {
+      signupForm.submit();
     }
-    signupForm.submit();
   }
-
-  // Allow the form to submit if validation passes
-  signupForm.submit();
 });
+  
